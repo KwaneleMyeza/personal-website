@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #091935;
+    color: #bfc7c8;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.home-nav {
+    position: absolute;
+    top: 5rem;
+    right: 10rem;
+}
+
+.home-nav a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+    margin-left: 1rem; /* Add spacing between links */
+}
+
+.home-nav a:hover {
+    text-decoration: underline;
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.intro {
+    max-width: 600px;
+}
+
+.greeting {
+    font-size: 1.2rem;
+    color: #9da7a8;
+    margin-bottom: 0;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0.2em 0;
+}
+
+.role {
+    font-size: 1.5rem;
+    color: #cccccc;
+    margin-top: 0.2em;
+}
+
+.description {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #bfc7c8;
+}
+
+.resume-content {
+max-width: 700px;
+text-align: left;
+}
+
+.resume-section {
+    margin-top: 2rem;
+}
+
+.resume-section h3 {
+    color: #ffffff;
+    margin-top: 1.5rem;
+}
+
+.resume-section ul {
+    padding-left: 1.5rem;
+    list-style: disc;
+}
