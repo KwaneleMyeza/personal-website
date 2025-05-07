@@ -1,34 +1,70 @@
+/* Resetting box-sizing for easier layout management */
 * {
     box-sizing: border-box;
 }
 
+/* Base styling for the page */
 html, body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #091935;
-    color: #bfc7c8;
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    color: #f0f0f0;
     height: 100%;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: auto; /* Prevent scrolling */
 }
 
-.home-nav {
-    position: absolute;
-    top: 5rem;
-    right: 10rem;
+/* Animation for the background gradient */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.home-nav a {
-    text-decoration: none;
-    color: #0066cc;
+/* Styling for headers */
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem 1rem 5rem;
+}
+
+.nav-left .home-link {
     font-weight: bold;
-    margin-left: 1rem; /* Add spacing between links */
+    font-size: 1.2rem;
+    color: #00c3ff;
+    text-decoration: none;
 }
 
-.home-nav a:hover {
-    text-decoration: underline;
+.nav-left .home-link:hover {
+    color: #ffcc00;
 }
 
+.nav-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: #00c3ff;
+    font-weight: bold;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-right a:hover {
+    transform: scale(1.1);
+    color: #ffcc00;
+}
+
+
+/* Center content alignment */
 .content-center {
     display: flex;
     justify-content: center;
@@ -36,8 +72,20 @@ html, body {
     height: 100vh;
     text-align: center;
     padding: 0 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease forwards;
+    animation-delay: 0.3s;
 }
 
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for intro text */
 .intro {
     max-width: 600px;
 }
@@ -68,9 +116,11 @@ html, body {
     color: #bfc7c8;
 }
 
+/* Resume section styling */
 .resume-content {
-max-width: 700px;
-text-align: left;
+    max-width: 700px;
+    text-align: center;
+    margin: 3rem auto 0 auto; /* Centered and below nav */
 }
 
 .resume-section {
@@ -84,5 +134,29 @@ text-align: left;
 
 .resume-section ul {
     padding-left: 1.5rem;
-    list-style: disc;
+    list-style: none;
+}
+
+.projects-page {
+    text-align: center;
+} 
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 3rem;
+}
+
+.footer a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.footer a:hover img {
+    transform: scale(1.2);
 }

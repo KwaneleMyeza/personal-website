@@ -3,12 +3,32 @@
 {% load static %}
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>{% block title %}Personal Website{% endblock title %}</title>
 
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="{% url 'home' %}" class="home-link">Home</a>
+        </div>
+        <div class="nav-right">
+            <a href="{% url 'resume' %}">Resume</a>
+            <a href="{% url 'projects_home' %}">Projects</a>
+        </div>
+    </nav>
     {% block page_content %}
     {% endblock page_content %}
+
+    <footer class="footer">
+        <a href="https://github.com/KwaneleMyeza" target="_blank">
+            <img src="{% static 'images/github.png' %}" alt="GitHub">
+        </a>
+        <a href="https://linkedin.com/in/kwanele-myeza-404a7223b/" target="_blank">
+            <img src="{% static 'images/linkedin.png' %}" alt="LinkedIn">
+        </a>
+    </footer>
+    
 </body>
 </html>
