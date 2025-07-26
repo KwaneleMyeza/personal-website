@@ -3,16 +3,20 @@
 {% load static %}
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>{% block title %}Personal Website{% endblock title %}</title>
-
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-left">
-            <a href="{% url 'home' %}" class="home-link">Home</a>
-        </div>
+            <a href="{% url 'home' %}">
+              <img src="{% static 'images/new_logo.png' %}" alt="Logo" class="logo">
+            </a>
+          </div>
+          
         <div class="nav-right">
             <a href="{% url 'resume' %}">Resume</a>
             <a href="{% url 'projects_home' %}">Projects</a>

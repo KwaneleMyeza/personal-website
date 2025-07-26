@@ -1,8 +1,40 @@
 {% extends "base.html" %} 
 
 {% block page_content %}
-    <div class="projects-page">
-        <h2>Coming Soon!!!</h2>
-    </div>
+<div class="projects-page">
+    <h1>My Projects</h1>
+    <div class="project-cards">
 
+        <div class="project-card">
+            <h3>Personal Portfolio</h3>
+            <p>My own website built with Django, Docker, and custom CSS.</p>
+            <a href="https://github.com/KwaneleMyeza/personal-website" target="_blank">View Repo</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Task Manager API</h3>
+            <p>A REST API built with Django REST Framework for managing tasks, with automated tests.</p>
+            <a href="https://github.com/KwaneleMyeza/task-manager-api" target="_blank">View Repo</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Web App Testing Suite</h3>
+            <p>Java Selenium framework for automated UI testing.</p>
+            <a href="https://github.com/KwaneleMyeza/portfolio-testing-suite" target="_blank">View Repo</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Simple Blog App</h3>
+            <p>A Django blog with comments and authentication.</p>
+            <a href="https://github.com/KwaneleMyeza/blog-app" target="_blank">View Repo</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Dockerized Testing Pipeline</h3>
+            <p>Containerized test suite for running Selenium tests anywhere.</p>
+            <a href="https://github.com/KwaneleMyeza/dockerized-testing-pipeline" target="_blank">View Repo</a>
+        </div>
+
+    </div>
+</div>
 {% endblock page_content %}
