@@ -1,6 +1,5 @@
 alabaster==0.7.16
 annotated-types==0.7.0
-apt-clone==0.2.1
 apturl==0.5.2
 asgiref==3.8.1
 babel==2.16.0
