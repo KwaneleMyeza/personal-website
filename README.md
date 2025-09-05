@@ -7,6 +7,7 @@ The site includes:
 - **Resume Page** – My professional experience and skills.
 - **Projects Page** – Overview of projects with GitHub links.
 
+
 ## Tech Stack
 
 - **Backend:** Django 5.1
@@ -15,9 +16,11 @@ The site includes:
 - **Deployment:** Render (free tier)
 - **Static Files:** Collected using Django’s `collectstatic`
 
+
 ## Live Demo
 
-Visit the live site here: [Your Render URL](https://your-app.onrender.com)
+Visit the live site here: https://kwanelemyeza.onrender.com
+
 
 ## Setup Instructions (Local Development)
 
