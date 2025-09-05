@@ -139,16 +139,39 @@
   .resume-section h3 {
     color: #ffffff;
     margin-top: 1.5rem;
+  } 
+
+  .resume-download {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.6rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
   }
+  
+  .resume-download:hover {
+    background-color: #0056b3;
+  }
+  
   
   /* Skills list with centered arrows */
   .skills-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: block; /* Shrink to fit content for centering */
-    text-align: left;
+    display: flex;
+    gap: 15rem; /* space between columns */
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
   }
+  
+  .skills-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
   .skills-list li {
     position: relative;
     padding-left: 1.5rem;

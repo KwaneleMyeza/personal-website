@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block page_content %}
     <div class="resume-content">
@@ -8,22 +9,32 @@
         <div class="resume-section">
             <h2>Professional Summary</h2>
             <p>
-                Passionate software developer and tester with a strong foundation in building reliable, scalable, and maintainable applications.
-                Experienced in working with cross-functional teams, delivering features in agile environments, and ensuring quality through automated testing.
+                I'm a passionate software developer and tester with a love for solving problems through technology.  
+                I specialise in Python and Django for back-end development and enjoy writing clean, maintainable code. 
+                I’m also experienced in automation testing using tools like Selenium and QF Test, 
+                which helps me ensure that software works reliably and efficiently.<br/><br/>
+
+                Over time, I’ve had the opportunity to mentor aspiring developers and review code, 
+                which not only allowed me to help others grow but also deepened my own understanding of best practices. 
+                I enjoy working in collaborative environments, bringing ideas to life, and learning from the people I work with.<br/><br/>
+                
+                When I’m not coding, I’m usually diving into something creative like drawing, listening to music, or curled up with a good book. I’m currently open to new opportunities — 
+                feel free to reach out if you’d like to connect!<br/><br/>
             </p>
 
             <h2>Skills</h2>
-            <ul class="skills-list">
-              <li>Python</li>
-              <li>Django</li>
-              <li>Java</li>
-              <li>Automation Testing (Selenium)</li>
-              <li>Automation Testing (QF Test)</li>
-              <li>SQL</li>
-              <li>Git</li>
-              <li>Docker</li>
-            </ul>
-            
+            <div class="skills-list">
+                <ul>
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>Java</li>
+                </ul>
+                <ul>
+                    <li>Selenium</li>
+                    <li>QF Test</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
 
             <h2>Experience</h2>
             <p><strong>Quality Assurance Intern – GK Software</strong> (July 2023 – October 2023)</p>
@@ -39,6 +50,13 @@
             <h2>Education</h2>
             <p><strong>NQF5 Certificate in IT - Systems Development</strong><br>
             WeThinkCode_, 2022</p>
+
+            <p>
+                <a href="{% static 'resume/kay_new_resume.pdf' %}" target="_blank" class="resume-download">
+                  📄 View Full Resume (PDF)
+                </a>
+              </p>
+              
         </div>
     </div>
 {% endblock page_content %}
