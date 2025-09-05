@@ -26,6 +26,7 @@ defer==1.0.6
 defusedxml==0.7.1
 distlib==0.3.8
 distro==1.7.0
+dj-database-url==3.0.1
 Django==5.1
 django-allauth==0.61.1
 django-bootstrap5==23.4
@@ -76,6 +77,7 @@ preshed==3.0.9
 prettytable==3.11.0
 protobuf==3.12.4
 psutil==5.9.0
+psycopg2-binary==2.9.10
 ptyprocess==0.7.0
 pycairo==1.20.1
 pycups==2.0.1
@@ -97,6 +99,7 @@ pyRFC3339==1.1
 pysqlite3==0.5.2
 python-apt==2.4.0+ubuntu4
 python-debian==0.1.43+ubuntu1.1
+python-decouple==3.8
 python-gnupg==0.4.8
 python-magic==0.4.24
 python-xlib==0.29
