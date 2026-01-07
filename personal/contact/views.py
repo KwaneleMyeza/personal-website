@@ -1,20 +1,36 @@
+import logging
 from django.shortcuts import render, redirect
 from .forms import ContactForm
+
+logger = logging.getLogger(__name__)
 
 
 def contact_view(request):
     sent = False
 
-    if request.method == "POST":
-        form = ContactForm(request.POST)
+    try:
+        if request.method == "POST":
+            form = ContactForm(request.POST)
 
-        if form.is_valid():
-            form.save()        # <<< THIS saves to DB
+            if form.is_valid():
+                form.save()
+                logger.info("Contact message saved successfully.")
+
+                # Prevent duplicate submissions
+                return redirect("/contact/?sent=true")
+
+        else:
+            form = ContactForm()
+
+        # Detect PRG flag
+        if request.GET.get("sent") == "true":
             sent = True
-            form = ContactForm()   # clear form after sending
-    else:
+
+    except Exception as e:
+        logger.error(f"Contact form failure: {str(e)}")
         form = ContactForm()
+        sent = False
 
     return render(request,
-                  'contact/contact.html',
-                  {'form': form, 'sent': sent})
+                  "contact/contact.html",
+                  {"form": form, "sent": sent})

@@ -1,16 +1,28 @@
 {% extends "base.html" %}
 
-{% block title %}Contact - Personal Website{% endblock %}
-{% block page_content %} 
+{% block title %}Contact – Personal Website{% endblock %}
+
+{% block page_content %}
+
 <h2>Contact Me</h2>
 
 {% if sent %}
-<p style=color:green;>Your message has been sent!</p>
-{%endif%} 
+<p style="color:green;">Your message has been sent!</p>
+{% endif %}
+
+{% if form.errors %}
+<div class="alert">
+    {{ form.errors }}
+</div>
+{% endif %}
 
 <form method="post">
     {% csrf_token %}
+
+    <input type="text" name="nickname" style="display:none">
+
     {{ form.as_p }}
+
     <button type="submit">Send</button>
 </form>
 
