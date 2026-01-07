@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),  # Homepage
     path('resume/', include('portfolio.urls')),
-    path('projects/', include('projects.urls')),  # Future
+    path('projects/', include('projects.urls')),  
+    path('contact/', include('contact.urls')),
 ]

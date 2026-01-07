@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'portfolio',
     'projects',
+    'contact',
 
 ]
 
@@ -90,6 +91,9 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
+# Email settings for development (prints emails to console)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST_USER = 'kwanele_temp@temp_address.com'  
 
 # Default primary key
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
