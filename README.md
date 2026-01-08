@@ -6,20 +6,33 @@ The site includes:
 - **Home Page** – Introduction and welcome.
 - **Resume Page** – My professional experience and skills.
 - **Projects Page** – Overview of projects with GitHub links.
+- **Contact Page** – Reach out to me!
+
 
 
 ## Tech Stack
 
 - **Backend:** Django 5.1
-- **Database:** PostgreSQL (deployed on Render)
+- **Database:** SQLite (local) or PostgreSQL (optional)
 - **Web Server:** Gunicorn
-- **Deployment:** Render (free tier)
 - **Static Files:** Collected using Django’s `collectstatic`
 
 
-## Live Demo
 
-Visit the live site here: https://kwanelemyeza.onrender.com
+## Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Resume Page
+![Resume Page](screenshots/resume.png)
+
+### Projects Page
+![Projects Page](screenshots/projects.png)
+
+### Contact Page
+![Contact Page](screenshots/contact.png)
+
 
 
 ## Setup Instructions (Local Development)
