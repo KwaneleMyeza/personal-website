@@ -13,27 +13,33 @@
     <nav class="navbar">
         <div class="nav-left">
             <a href="{% url 'home' %}">
-              <img src="{% static 'images/new_logo.png' %}" alt="Logo" class="logo">
+                <img src="{% static 'images/new_logo.png' %}" alt="Logo" class="logo">
             </a>
-          </div>
-          
+        </div>
+
         <div class="nav-right">
             <a href="{% url 'resume' %}">Resume</a>
             <a href="{% url 'projects_home' %}">Projects</a>
+            <a href="{% url 'contact' %}">Contact</a>
         </div>
     </nav>
-    {% block page_content %}
-    {% endblock page_content %}
+
+    <main class="page-wrapper">
+        {% block page_content %}
+        {% endblock page_content %}
+    </main>
 
     <footer class="footer">
-        <a href="https://github.com/KwaneleMyeza" target="_blank">
-            <img src="{% static 'images/github.png' %}" alt="GitHub">
-        </a>
-        <a href="https://linkedin.com/in/kwanele-myeza-404a7223b/" target="_blank">
-            <img src="{% static 'images/linkedin.png' %}" alt="LinkedIn">
-        </a>
-        <a href="{% url 'contact' %}">Contact Me</a>
+        <div class="footer-links">
+            <a href="https://github.com/KwaneleMyeza" target="_blank">
+                <img src="{% static 'images/github.png' %}" alt="GitHub">
+            </a>
+            <a href="https://linkedin.com/in/kwanele-myeza-404a7223b/" target="_blank">
+                <img src="{% static 'images/linkedin.png' %}" alt="LinkedIn">
+            </a>
+        </div>
+        <p class="footer-text">© 2026 Kwanele Myeza</p>
     </footer>
-    
 </body>
+
 </html>

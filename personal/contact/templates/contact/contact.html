@@ -4,7 +4,7 @@
 
 {% block page_content %}
 
-<h2>Contact Me</h2>
+<h1 class="heading-gap">Contact Me</h1>
 
 {% if sent %}
 <p style="color:green;">Your message has been sent!</p>
@@ -22,8 +22,9 @@
     <input type="text" name="nickname" style="display:none">
 
     {{ form.as_p }}
-
-    <button type="submit">Send</button>
+    <div class="button-container">
+        <button type="submit" class="contact-btn">Send</button>
+    </div>
 </form>
 
 {% endblock %}
