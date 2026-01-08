@@ -22,16 +22,16 @@ The site includes:
 ## Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.png)
+![Home Page](personal/screenshots/home.png)
 
 ### Resume Page
-![Resume Page](screenshots/resume.png)
+![Resume Page](personal/screenshots/resume.png)
 
 ### Projects Page
-![Projects Page](screenshots/projects.png)
+![Projects Page](personal/screenshots/projects.png)
 
 ### Contact Page
-![Contact Page](screenshots/contact.png)
+![Contact Page](personal/screenshots/contact.png)
 
 
 
